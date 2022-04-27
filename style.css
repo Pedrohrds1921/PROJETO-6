@@ -94,6 +94,7 @@ animation: header 900ms 800ms backwards;
 
 .page p{
 
+    width: 32rem;
     color: #23053A;
     font-family: var(--font-second);
 font-size: 2rem;
@@ -132,16 +133,17 @@ gap: 3.2rem;
     font-size: 2rem;
 
     padding: 8px 2.4rem;
-
+    width: fit-content;
     position:absolute ;
     right: 1.5rem;top:1.8rem;
-
     background-color: #feeafa; 
     font-family: var(--font-second);
     color: #4A4E69;
     border-radius: 2.0rem;
     font-family: var(--font-one);
     letter-spacing: 0.05em;
+    display:inline-flex;
+
 }
 
 .container .card:nth-of-type(2n) img{
