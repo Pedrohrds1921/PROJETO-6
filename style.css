@@ -31,7 +31,7 @@
 }
 
 @keyframes header{
-    0%{transform: translateX(-420px) }
+    0%{transform: translateX(-100vw) }
 
     100%{transform: translateX(0);}
 }
