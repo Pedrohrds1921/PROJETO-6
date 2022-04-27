@@ -89,7 +89,7 @@ animation: header 900ms 800ms backwards;
    align-items: center;
    gap: 3.2rem;
    text-align: center;
-   animation: intro 700ms 950ms backwards;
+   animation: intro 800ms 950ms backwards;
 }
 
 .page p{
