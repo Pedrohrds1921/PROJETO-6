@@ -74,7 +74,6 @@ color: var(--fc-one);
 text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
 animation: header 900ms 800ms backwards;
-
 }
 
 header p{
@@ -82,7 +81,7 @@ header p{
 }
 
 .page{
-
+    padding: 0 3.2rem;
     width: 35rem;  
    display: flex;
    flex-direction: column;
