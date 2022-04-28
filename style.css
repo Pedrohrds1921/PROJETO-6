@@ -39,7 +39,7 @@
 
 
 body{
-    width: 100%;
+    width: 100vw;
     font-size: 1.6rem;
     background-color: var(--c-one);
     
@@ -68,9 +68,10 @@ background-color: #CBC0D3;
 font-family: var(--font-one);
 font-style: normal;
 font-weight: 400;
-font-size: 4.0rem;
+font-size: clamp (4.0rem);
 line-height: 3.4rem;
 color: var(--fc-one);
+
 text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
 animation: header 900ms 800ms backwards;
@@ -81,8 +82,8 @@ header p{
 }
 
 .page{
-    padding: 0 3.2rem;
-    width: 35rem;  
+    padding: 0 2.5rem;
+    width: 30rem;  
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -94,7 +95,7 @@ header p{
 
 .page p{
 
-    width: 35rem;
+    max-width: 35rem;
     color: #2d074b;
     font-family: var(--font-second);
 font-size: 2rem;
@@ -107,11 +108,12 @@ margin-top: 1.4rem;
 .container{
 display: flex;
 flex-direction: column;
-gap: 3.2rem;
+gap: 3.2REM;
 
 }
 .card{
-    width: 32rem;  
+    width: 32rem; 
+
     position: relative;
 
     transition-duration: 750MS;
@@ -121,8 +123,8 @@ gap: 3.2rem;
     transform: scale(1.05);
 }
 .card img{
-    width: 32rem;
-    height: 25rem;
+    width: 100%;
+    height: 25REM;
     object-fit: cover;
     filter: brightness(0.5);
     border-radius: 2rem;
@@ -137,6 +139,7 @@ gap: 3.2rem;
     width: fit-content;
     position:absolute ;
     right: 1.5rem;top:1.8rem;
+
     background-color: #feeafa; 
     font-family: var(--font-second);
     color: #4A4E69;
@@ -157,15 +160,18 @@ footer{
 
 
 
-@media (min-width:700px) {
+@media (min-width:1300px) {
 
     body{
         height: 100vh;
         display: flex;
     }
 .page{
-    flex-direction: row;
-    align-items: flex-start;
+ 
+    width: calc(100vw - 37.7rem);
+    margin: 0;
+    padding: 0;
+    
 }
 
 
@@ -188,9 +194,64 @@ header p {
     padding: 1px;
 
 }
-.page p{
+.page > p{
     display: none;
+   
 }
+
+
+.container{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 17.5rem);
+
+padding: 6.4rem;
+
+grid:4.2rem;
+
+}
+
+.container .card:nth-of-type(2n) img{
+    height:inherit;
+}
+
+
+
+.card{
+    width: 25rem;
+    height: 100%;
+
+   
+}
+
+.card img{height: 17.5rem}
+
+.container .card:nth-of-type(2){grid-row: span 2}
+
+
+.container .card:nth-of-type(4){grid-row: 2 / 4;}
+
+
+.container .card:nth-of-type(6){grid-column: 3;grid-row: 2 / 4;}
+
+footer {
+    width: 100%;
+    display:inline-block;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+
+
+text-align: center;
+
+color: #4A4E69
+    
+}
+
+
+
+
+
 
 
 
